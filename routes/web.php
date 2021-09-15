@@ -17,6 +17,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/calm/{num1}/{operator/{num2}', [
-    App\Http\Controllers\CalcController::class, 'result'
-]);
+Route::get(
+    '/calcs/{num1}/{operator}/{num2}',
+    [App\Http\Controllers\CalcsController::class, 'result']
+);
